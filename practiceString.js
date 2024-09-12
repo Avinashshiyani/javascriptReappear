@@ -11,5 +11,6 @@ let sentence = "Please";
 
 // let extract = sentence.toLowerCase();
 
-// let th = sentence.slice(14);
-let change = sentence.slice
+let th = sentence.slice();
+console.log(th)
+// let change = sentence.slice
