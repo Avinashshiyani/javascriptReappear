@@ -11,7 +11,7 @@
     <div class="hello">
         <p>H</p>
         <p>8</p>
-        <p id="hello">Hello world</p>
+        <p id="hi">Hello world</p>
     </div>
 </body>
 
@@ -28,6 +28,11 @@
     // query selector
     let querySelect = document.querySelector(".hello");
     querySelect.style.color = "red";
+
+    // check 
+    console.log(querySelect.matches('.hello'));
+    console.log(querySelect.closest('.hello'));
+    console.log(querySelect.contains(idSearch))
 
     let querySelectAll = document.getElementsByTagName("p")
     console.log(querySelectAl);
