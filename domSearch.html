@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="hello">
+        <p>H</p>
+        <p>8</p>
+        <p id="hello">Hello world</p>
+    </div>
+</body>
+
+</html>
+<script>
+    // id search
+    let idSearch = document.getElementById("hi");
+    idSearch.style.color = "red";
+
+    // class search
+    let classSearch = document.getElementsByClassName("hello");
+    console.log(classSearch);
+
+    // query selector
+    let querySelect = document.querySelector(".hello");
+    querySelect.style.color = "red";
+
+    let querySelectAll = document.getElementsByTagName("p")
+    console.log(querySelectAl);
+    console.log(querySelectAl[2]);
+</script>
