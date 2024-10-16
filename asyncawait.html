@@ -18,15 +18,15 @@
         let a = () => {
             setTimeout(() => {
                 console.log("hello")
-            }, 2000)
+            }, 1000)
         }
         let b = () => {
             setTimeout(() => {
                 console.log("hello b")
             }, 1000)
         }
-        await b()
-        await a()
+        b()
+        a()
     }
     hello()
 </script>
