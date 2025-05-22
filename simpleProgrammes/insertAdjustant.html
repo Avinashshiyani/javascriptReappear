@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="first">
+        <p>Hello </p>
+    </div>
+</body>
+
+</html>
+<script>
+    let elementId = document.getElementById("first");
+
+    elementId.insertAdjacentHTML("beforebegin", "<p>beforebegin</p>")
+    elementId.insertAdjacentHTML("beforeend", "<p>beforeend</p>")
+    elementId.insertAdjacentHTML("afterbegin", "<p>afterbegin</p>")
+    elementId.insertAdjacentHTML("afterend", "<p>afterned</p>")
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        start
+        <p id="hello"></p>
+        end
+    </div>
+</body>
+
+</html>
+<script>
+    let id = document.getElementById("hello");
+    console.log(id)
+    // id.innerHTML = "Hl"
+
+    let div = document.createElement("div");
+    div.innerHTML = "i am div";
+
+    // id.prepend(div);
+    // id.before(div)
+    // id.appendChild(div);
+    id.replaceWith(div);
+</script>
