@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task App</title>
+</head>
+
+<body>
+  <input type="text" id="taskInput" placeholder="Enter a task" />
+  <button id="addTask">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    // ✅ Select the elements
+    const inputValue = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+    const addBtn = document.getElementById("addTask");
+
+    // ✅ Add click event
+    addBtn.addEventListener("click", () => {
+      const taskText = inputValue.value;
+
+      if (taskText.trim() !== "") {
+        const newTask = document.createElement("li");
+        newTask.textContent = taskText;
+        taskList.appendChild(newTask);
+        inputValue.value = "";
+      }
+    });
+  </script>
+</body>
+
+</html>
