@@ -1,0 +1,52 @@
+<!-- ✅ Challenge 5 (Bonus): Input Task List
+📌 Create a basic task input: 
+Input field
+Button that says Add Task
+Empty <ul> list
+👉 When the button is clicked:
+Read the input value
+Create an <li> with the input text
+Append it to the list
+Clear the input -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 5</title>
+</head>
+
+<body>
+
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button id="addTask">Add Task</button>
+    <ul id="taskList"></ul>
+
+</body>
+
+</html>
+
+<script>
+
+    let taskInput = document.getElementById("taskInput");
+    let buttonId = document.getElementById("addTask");
+    let uiId = document.getElementById("taskList");
+
+    buttonId.addEventListener("click", () => {
+        if (taskInput.value !== "") {
+            let taskValue = taskInput.value;
+            let listItem = document.createElement("li");
+            listItem.textContent = taskValue;
+
+            uiId.appendChild(listItem);
+
+            taskInput.value = "";
+        }
+        else {
+            console.log("Plase Input Field")
+        }
+    })
+
+</script>

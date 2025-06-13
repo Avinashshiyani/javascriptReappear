@@ -1,0 +1,29 @@
+<!-- ✅ Challenge 3: Create a Button and Handle Click
+📌 Dynamically create a <button> with the text "Click Me!", append it to the body.
+👉 Add a click event that logs "Button clicked!" in the console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let buttonText = document.createElement("button");
+    buttonText.textContent = "Hello world";
+    document.body.appendChild(buttonText);
+
+    buttonText.addEventListener("click", () => {
+        console.log("Button CLicked!");
+    })
+
+</script>
