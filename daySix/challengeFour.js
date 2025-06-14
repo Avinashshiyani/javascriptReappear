@@ -13,4 +13,4 @@ const countStairs = (stairs = 10)=>{
     }
 }
 
-countStairs();
+countStairs();  
