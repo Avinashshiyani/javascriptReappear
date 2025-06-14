@@ -1,0 +1,30 @@
+<!-- Create a button.
+👉 When clicked, it should alert "This will appear only once" and then disable the listener. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Click Me Challenge Three</button>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.getElementById("btn");
+
+    function alertOne() {
+        alert("This will only appear once ")
+        btn.removeEventListener("click", alertOne);
+    }
+
+    btn.addEventListener("click", alertOne);
+
+</script>

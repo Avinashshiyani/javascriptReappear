@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+</head>
+
+<body>
+    <div>
+        <button class="color-btn">Red</button>
+        <button class="color-btn">Green</button>
+        <button class="color-btn">Blue</button>
+    </div>
+
+    <script>
+        let buttons = document.querySelectorAll(".color-btn");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                let color = button.textContent.toLowerCase(); // 'Red' -> 'red'
+                document.body.style.backgroundColor = color;
+            });
+        });
+    </script>
+</body>
+
+</html>

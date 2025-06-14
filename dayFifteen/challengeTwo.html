@@ -1,0 +1,36 @@
+<!-- ✅ Challenge 2: Hover Effect
+📌 Create a <div> with some text.
+👉 On mouse enter, change the background to yellow.
+👉 On mouse leave, change it back to white. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="changeColor">
+        hello world
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let changeColor = document.getElementById("changeColor");
+
+    changeColor.addEventListener("mouseenter", () => {
+        changeColor.style.backgroundColor = "yellow"
+    })
+
+    changeColor.addEventListener("mouseleave", () => {
+        changeColor.style.backgroundColor = "white"
+
+    })
+
+</script>
