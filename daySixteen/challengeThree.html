@@ -1,0 +1,39 @@
+<!-- ✅ Challenge 3: Add and Remove Class Dynamically
+📌 Create multiple li items inside a list.
+👉 When an li is clicked, add the class selected to it and remove selected from others. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .selected {
+        background-color: lightblue;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <ul>
+        <li class="list">Hello One</li>
+        <li class="list">Hello Two</li>
+        <li class="list">Hello Three</li>
+    </ul>
+</body>
+
+</html>
+
+<script>
+    let list = document.querySelectorAll(".list");
+
+    list.forEach((e) => {
+        e.addEventListener("click", () => {
+            e.classList.toggle("selected");
+        })
+    })
+
+</script>

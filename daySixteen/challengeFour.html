@@ -1,0 +1,44 @@
+<!-- ✅ Challenge 4: Remove a Specific Element
+📌 Create a list of tasks (ul > li).
+👉 Add a delete button next to each task.
+👉 When clicked, the task should be removed using removeChild. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="ulList">
+        <li class="list">
+            <p>Hello One</p>
+            <button class="btn">Delete</button>
+        </li>
+        <li class="list">
+            <p>Hello Two</p>
+            <button class="btn">Delete</button>
+        </li>
+        <li class="list">
+            <p>Hello Three</p>
+            <button class="btn">Delete</button>
+        </li>
+    </ul>
+</body>
+
+</html>
+
+<script>
+    let btns = document.querySelectorAll(".btn");
+    let ulList = document.querySelector(".ulList");
+
+    btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            let liToRemove = btn.parentElement;  // get the <li> that contains the button
+            ulList.removeChild(liToRemove);      // remove that <li> from the <ul>
+        });
+    });
+</script>

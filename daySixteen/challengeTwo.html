@@ -1,0 +1,40 @@
+<!-- ✅ Challenge 2: Toggle Visibility
+📌 Create a div with text “You can see me!”.
+👉 Add a button that toggles its visibility using the hidden property. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        You can see mee
+    </div>
+    <button class="btn">
+        Hide me
+    </button>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    let box = document.querySelector(".box");
+
+    btn.addEventListener("click", () => {
+        if (box.hidden != true) {
+            box.hidden = true;
+        }
+        else {
+            box.hidden = false;
+        }
+    })
+
+</script>

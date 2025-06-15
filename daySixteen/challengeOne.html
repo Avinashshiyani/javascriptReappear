@@ -1,0 +1,42 @@
+<!-- ✅ Challenge 1: Add and Remove a Class
+📌 Create a div with the class box.
+👉 On button click, add the class highlight to it.
+👉 On second click, remove it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .highlight {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <p>Please Highlight this on CLick</p>
+    </div>
+    <button class="btn">
+        Highlight
+    </button>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    let box = document.querySelector(".box");
+
+    btn.addEventListener("click", () => {
+        box.classList.toggle("highlight");
+    })
+
+</script>
