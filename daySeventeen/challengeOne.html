@@ -1,0 +1,39 @@
+<!-- ✅ Challenge 1: Access Parent Element
+📌 Click a button inside a div. Use parentElement to change the background of the parent.
+
+Expected Result: On button click, the parent <div> background changes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        height: 500px;
+        width: 500px;
+        border: 1px green 20px;
+    }
+</style>
+
+<body>
+    <div class="box">
+        j
+        <button class="btn">Change Color</button>
+    </div>
+</body>
+
+</html>
+<script>
+    let btn = document.querySelector(".btn");
+    let box = document.querySelector(".box");
+
+    btn.addEventListener("click", () => {
+        let changeColorElement = btn.parentElement;
+        changeColorElement.style.backgroundColor = "red";
+    })
+
+</script>

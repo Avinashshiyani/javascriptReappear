@@ -1,0 +1,45 @@
+<!-- ✅ Challenge 4: Delete on Click
+📌 Each <li> has a delete button.
+👉 Clicking it removes only that <li> using removeChild().
+
+Hint: You’ll need parentElement from the button to get the <li>. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="uiItem">
+        <li class="list">
+            <p>Hello One</p>
+            <button class="btn">Delete</button>
+        </li>
+        <li class="list">
+            <p>Hello Two</p>
+            <button class="btn">Delete</button>
+        </li>
+        <li class="list">
+            <p>Hello Three</p>
+            <button class="btn">Delete</button>
+        </li>
+
+    </ul>
+</body>
+
+</html>
+<script>
+
+    let btn = document.querySelectorAll(".btn");
+
+    btn.forEach((e) => {
+        e.addEventListener("click", () => {
+            let parentElement = e.parentElement.remove();
+        })
+    })
+
+</script>

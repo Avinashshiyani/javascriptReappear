@@ -1,0 +1,34 @@
+<!-- ✅ Challenge 2: Remove First Child
+📌 Have a <ul> with a few <li> items.
+👉 Add a button that removes the first child using removeChild().
+
+Expected Result: Every time the button is clicked, the first list item disappears. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="uiItem">
+        <li>Helllo One</li>
+        <li>Helllo Two</li>
+        <li>Helllo Three</li>
+        <button class="btn">Remove Children</button>
+    </ul>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let ulItem = document.querySelector(".uiItem");
+    btn.addEventListener("click", () => {
+        let firstChildren = ulItem.firstElementChild;
+        ulItem.removeChild(firstChildren);
+    })
+</script>

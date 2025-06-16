@@ -1,0 +1,41 @@
+<!-- Challenge 3: Highlight Next Sibling
+📌 Click on a <li> item, and its next sibling gets a class .highlight.
+
+Expected Result: When you click on Item 1, Item 2 gets highlighted, and so on.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hightlight {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <ul class="uiItem">
+        <li class="list">Helllo One</li>
+        <li class="list">Helllo Two</li>
+        <li class="list">Helllo Three</li>
+    </ul>
+</body>
+
+</html>
+<script>
+
+    let list = document.querySelectorAll(".list");
+
+    list.forEach((e) => {
+        e.addEventListener("click", () => {
+            e.nextElementSibling.classList.add("hightlight");
+
+        })
+    })
+
+</script>

@@ -1,0 +1,33 @@
+<!-- Challenge 5 (Bonus): Closest Match Finder
+📌 You have nested elements.
+👉 On clicking a child element, use .closest(".card") to find the card container and change its border. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+        <div class="content">
+            <button class="btn">Click Me</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+        let card = btn.closest(".content");
+        card.style.backgroundColor = "red";
+    })
+
+</script>
