@@ -1,0 +1,32 @@
+<!-- ✅ Challenge 2: Insert Before Specific Element
+📌 Create two <p> tags inside a container.
+👉 Add a button that inserts a new paragraph saying "Inserted!" before the second paragraph using insertBefore(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>Paragraph One</p>
+        <p id="second">Paragraph Two</p>
+    </div>
+    <button id="btn">Add </button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.getElementById("btn");
+    let second = document.getElementById("second");
+    btn.addEventListener("click", () => {
+        let newParagraph = document.createElement("p");
+        newParagraph.textContent = "New Paragraph";
+        second.parentElement.insertBefore(newParagraph , second);
+    })
+</script>

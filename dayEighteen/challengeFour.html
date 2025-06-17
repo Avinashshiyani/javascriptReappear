@@ -1,0 +1,33 @@
+<!-- ✅ Challenge 4: Replace an Element
+📌 Create a paragraph that says "Old Text".
+👉 Add a button that, when clicked, replaces it with a new paragraph that says "New Text" using replaceChild(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <p class="old">Old text</p>
+        <button class="btn">Replace</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let old = document.querySelector(".old");
+    let parentNode = document.querySelector(".parent");
+    btn.addEventListener("click", () => {
+        let newPara = document.createElement("p");
+        newPara.textContent = "new Paragraph";
+        parentNode.replaceChild(newPara , old)
+    })
+
+</script>

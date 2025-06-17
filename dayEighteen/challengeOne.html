@@ -1,0 +1,33 @@
+<!-- ✅ Challenge 1: Append a New Element
+📌 Create a <ul> with some <li> items.
+👉 Add a button that, when clicked, appends a new <li> saying "New Item" to the end of the list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="uichildren">
+        <li>Item One</li>
+        <li>Item Two</li>
+    </ul>
+    <button id="btn">Add </button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.getElementById("btn");
+    let uichildren = document.querySelector(".uichildren");
+    btn.addEventListener("click", () => {
+        let newItem = document.createElement('li');
+        newItem.textContent = "New Item";
+        uichildren.appendChild(newItem);
+    })
+
+</script>

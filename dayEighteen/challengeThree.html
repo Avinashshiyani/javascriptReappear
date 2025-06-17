@@ -1,0 +1,36 @@
+<!-- ✅ Challenge 3: Clone and Append
+📌 Create a card-like <div> with some content inside.
+👉 Add a button that, when clicked, clones the card (using cloneNode(true)) and appends it to the same container. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+        <p>Hello brother how are you </p>
+    </div>
+</body>
+
+<button id="btn">Add and Append</button>
+
+</html>
+
+<script>
+
+    let btn = document.getElementById("btn");
+
+    let card = document.querySelector(".card");
+
+
+    btn.addEventListener("click", () => {
+        let clonedCard = card.cloneNode(true);
+        card.append(clonedCard);
+    })
+
+</script>
