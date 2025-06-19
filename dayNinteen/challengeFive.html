@@ -1,0 +1,29 @@
+<!-- ✅ Challenge 5 (Bonus): Change Image on Click
+📌 Create an <img> and a button.
+👉 When the button is clicked, change the image using setAttribute("src", ...). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../../Portfolio/src/assets/about.png" alt="">
+    <button class="btn">Change</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let image = document.querySelector("image");
+
+    btn.addEventListener("click", () => {
+        image.setAttribute("src", "../../Portfolio/src/assets/react.svg");
+    })
+
+</script>

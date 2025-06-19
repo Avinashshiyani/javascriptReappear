@@ -1,0 +1,27 @@
+<!-- 📌 Create an <a> tag with a link.
+    👉 On button click, use setAttribute() to open it in a new tab (target="_blank"). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a id="aTag" href="www.google.com">google.com</a>
+    <button class="btn">New Page</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let atag = document.querySelector('a');
+    btn.addEventListener("click", () => {
+        atag.setAttribute("target", "_blank")
+    })
+
+</script>

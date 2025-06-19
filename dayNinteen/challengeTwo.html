@@ -1,0 +1,28 @@
+<!-- ✅ Challenge 2: Show Image Source
+📌 Have an <img> tag with an image.
+👉 On button click, alert the image’s src using getAttribute(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../../Portfolio/src/assets/about.png" alt="">
+    <button class="btn">Click</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let image = document.querySelector("img");
+    btn.addEventListener("click", () => {
+        let source = image.getAttribute("src");
+        alert(source);
+    })
+</script>

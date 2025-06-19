@@ -1,0 +1,30 @@
+<!-- ✅ Challenge 3: Remove Placeholder
+📌 Have an <input> with a placeholder.
+👉 On button click, remove the placeholder using removeAttribute(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="" placeholder="Enter you upi address and pin">
+    <button class="btn">Btn</button>
+</body>
+
+</html>
+
+<script>
+
+    let inputPlaceholder = document.querySelector("input");
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+        let remove = inputPlaceholder.removeAttribute("placeholder")
+    })
+
+</script>

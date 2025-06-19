@@ -1,0 +1,29 @@
+<!-- ✅ Challenge 4: Display Input Value
+📌 Create an <input> and a button.
+👉 When clicked, show an alert with the value the user typed (use .value). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter Value">
+    <button class="btn">Btn</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let input = document.querySelector("input");
+
+    btn.addEventListener("click", () => {
+        alert(input.value);
+    })
+
+</script>
