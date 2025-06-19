@@ -1,0 +1,40 @@
+<!-- ✅ Challenge 3: Delayed Color Change
+📌 When a user clicks a button, change the background color of a div after 2 seconds. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 500px;
+        width: 500px;
+        border: 10px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>Change My color by clicking the button After 2 Seconds.</p>
+        <button class="btn">Change the color</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    btn.addEventListener("click", () => {
+        let container = document.querySelector(".container");
+        setTimeout(() => {
+            container.style.backgroundColor = "red";
+        }, 2000)
+    })
+</script>

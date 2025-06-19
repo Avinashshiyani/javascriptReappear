@@ -1,0 +1,32 @@
+<!-- ✅ Challenge 1: Delayed Message
+📌 Show a message 3 seconds after clicking a button.
+
+Expected Result:
+User clicks → After 3 seconds → Show alert("Hello after 3 seconds!") -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">Click me</button>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+        setTimeout(() => {
+            alert("Hello after 3 seconds");
+        }, 3000)
+    })
+
+</script>

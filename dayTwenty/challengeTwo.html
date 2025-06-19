@@ -1,0 +1,38 @@
+<!-- ✅ Challenge 2: Repeating Counter
+📌 Create a button that starts a counter (0 → 1 → 2…) every second on click.
+
+Bonus: Add a second button to stop the counter. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p id="count">0</p>
+        <button class="btn">Start Counter</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    let count = document.getElementById("count")
+
+    btn.addEventListener("click", () => {
+        let counter = 0;
+        setInterval(() => {
+            count.textContent = counter++;
+        }, 1000)
+    })
+
+
+</script>
