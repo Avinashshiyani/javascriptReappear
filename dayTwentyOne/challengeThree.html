@@ -1,0 +1,35 @@
+<!-- ✅ Challenge 3: Stop Bubbling
+📌 Create a div with a button inside.
+👉 When you click the button, only the button’s handler runs (prevent bubbling).
+👉 When you click the div, log “Div clicked”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn">One</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    let container = document.querySelector(".container")
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("Button CLicked");
+    })
+
+    container.addEventListener("click", () => {
+        console.log("container clciked")
+    })
+
+</script>

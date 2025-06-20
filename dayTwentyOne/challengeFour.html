@@ -1,0 +1,44 @@
+<!-- ✅ Challenge 4: Capture Phase
+📌 Create nested elements: <div> -> <section> -> <button>.
+👉 Attach capturing listeners on all 3 and log their tags during capture. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <button>Click ME</button>
+        </section>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let container = document.querySelector(".container");
+    let section = document.querySelector("section");
+    let btn = document.querySelector("button");
+
+    container.addEventListener("click", () => {
+        console.log("container")
+    }, true);
+
+    section.addEventListener("click", () => {
+        console.log("section")
+    }, true);
+
+    btn.addEventListener("click", () => {
+        console.log("btn")
+    }, true);
+
+
+</script>

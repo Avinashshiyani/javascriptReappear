@@ -1,0 +1,32 @@
+<!-- ✅ Challenge 1: List Item Alert Using Delegation
+📌 Create a <ul> with multiple <li> items.
+👉 When you click any li, alert its text using event delegation (1 listener on ul). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="time">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+</body>
+
+</html>
+
+<script>
+
+    let time = document.querySelector(".time");
+
+    time.addEventListener("click", (e) => {
+        alert(e.target.innerText);
+    })
+
+</script>

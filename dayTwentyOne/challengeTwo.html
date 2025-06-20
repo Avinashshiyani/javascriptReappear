@@ -1,0 +1,38 @@
+<!-- ✅ Challenge 2: Dynamic Button Handler
+📌 Have a <div> container.
+👉 When you click any button inside the div, log the button’s text.
+👉 Add a new button dynamically after 2 seconds — ensure it works without adding a new event listener! -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <button>One</button>
+        <button>Two</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let container = document.querySelector(".container")
+    container.addEventListener("click", (e) => {
+        if (e.target.tagName == "BUTTON") {
+            console.log(e.target.innerText);
+        }
+    })
+
+    setTimeout(() => {
+        let newElement = document.createElement("button");
+        newElement.textContent = "Three"
+        container.append(newElement)
+    }, 2000)
+
+</script>
