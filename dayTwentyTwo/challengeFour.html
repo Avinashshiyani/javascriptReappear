@@ -1,0 +1,28 @@
+<!-- ✅ Challenge 4: Retrieve and Parse from localStorage
+📌 Get the item from localStorage that was stored in the previous challenge.
+👉 Parse it back to an object and log any property. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let getDataFromLs = localStorage.getItem("info");
+
+    let originalData = JSON.parse(getDataFromLs);
+
+    console.log(originalData.name);
+
+</script>

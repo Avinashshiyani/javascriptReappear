@@ -1,0 +1,28 @@
+<!-- ✅ Challenge 5 (Bonus): Clear Local Storage
+📌 Add a button.
+👉 When clicked, it should clear all items from localStorage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">REMOVE DATA FROM LOCALESTORAGE</button>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+        localStorage.clear();
+    })
+
+</script>
