@@ -1,0 +1,56 @@
+<!-- Challenge 3: Email Format Check
+📌 On submit, validate if the email is in correct format using a RegEx or HTML type="email".
+👉 If not valid, show a custom error message like "Invalid email address". -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="form">
+        <input type="text" name="username" placeholder="Enter username">
+        <p class="usernameError"></p>
+        <input type="email" name="email" placeholder="Enter Email">
+        <p class="emailError"></p>
+        <button class="btn">Submit</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    let form = document.querySelector(".form");
+
+    let usernameError = document.querySelector(".usernameError");
+    let emailError = document.querySelector(".emailError");
+
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let usernameValidation = form.elements["username"].value;
+        let emailValidation = form.elements["email"].value;
+        if (usernameValidation === "") {
+            form.elements["username"].style.border = "2px solid red";
+        }
+        else {
+            form.elements["username"].style.border = "2px solid green";
+
+        }
+        if (emailValidation === "") {
+            form.elements["email"].style.border = "2px solid red";
+        }
+        else {
+            form.elements["email"].style.border = "2px solid green";
+
+        }
+
+    })
+
+</script>

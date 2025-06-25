@@ -1,0 +1,44 @@
+<!-- ✅ Challenge 5 (Bonus): Instant Validation
+📌 As the user types in username, check in real time if it's at least 3 characters.
+👉 Show live feedback under the input:
+
+"Too short" (red)
+
+"Looking good" (green)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Validation</title>
+</head>
+
+<body>
+    <form class="form">
+        <input type="text" name="username" placeholder="Username" />
+        <p class="username-error"></p>
+    </form>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector(".form");
+    let error = document.querySelector(".username-error");
+
+    form.elements["username"].addEventListener("input", () => {
+        let username = form.elements["username"].value;
+        if (username.length < 3) {
+            error.style.color = "red";
+            error.textContent = "Too short for username";
+        } else {
+            error.style.color = "green";
+            error.textContent = "Looking good!";
+        }
+    });
+
+
+</script>

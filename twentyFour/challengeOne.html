@@ -1,0 +1,58 @@
+<!-- 📌 Create a form with inputs: username and email.
+👉 When the user clicks submit, check that both fields are not empty.
+👉 If any field is empty, show an error message below that input.
+👉 If all are filled, log the values in the console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="form">
+        <input type="text" name="username" placeholder="Enter username">
+        <p class="usernameError"></p>
+        <input type="email" name="email" placeholder="Enter Email">
+        <p class="emailError"></p>
+        <button class="btn">Submit</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    let form = document.querySelector(".form");
+
+    let usernameError = document.querySelector(".usernameError");
+    let emailError = document.querySelector(".emailError");
+
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let usernameValidation = form.elements["username"].value;
+        let emailValidation = form.elements["email"].value;
+        if (usernameValidation === "") {
+            usernameError.style.color = "red";
+            usernameError.textContent = "Username is required"
+        }
+        else if (emailValidation === "") {
+            emailError.style.color = "red";
+            emailError.textContent = "email is required"
+        }
+        else {
+            usernameError.textContent = "";
+            emailError.textContent = "";
+            console.log(`username is ${usernameValidation} and email is ${emailValidation}`)
+            usernameValidation === "";
+            emailValidation === "";
+        }
+
+    })
+
+</script>

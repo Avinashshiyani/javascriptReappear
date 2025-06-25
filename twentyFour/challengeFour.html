@@ -1,0 +1,50 @@
+<!-- ✅ Challenge 4: Password Match
+📌 Create a form with password and confirm password.
+👉 On submit, check if both match.
+👉 If they don’t match, show: “Passwords do not match”
+👉 If they match, log: “Registration Successful” -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="form">
+        <input type="password" name="password" placeholder="Enter Password">
+        <br><br>
+        <input type="password" name="cpassword" placeholder="Confirm Password">
+        <p class="error"></p>
+        <button class="btn">Check</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+    let error = document.querySelector(".error");
+    let form = document.querySelector(".form");
+
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let password = form.elements["password"];
+        let cpassword = form.elements["cpassword"];
+
+        if (password.value.trim() === "" && cpassword.value.trim() === "") {
+            error.textContent = "input is empty"
+        }
+        if (password.value.trim() === cpassword.value.trim()) {
+            console.log("regsitration successfull");
+        }
+        else {
+            error.textContent = "password do not match";
+        }
+    })
+
+</script>
