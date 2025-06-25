@@ -1,0 +1,49 @@
+<!-- ✅ Challenge 3: Update Only Name in Local Storage
+📌 Add a button: “Update Name”.
+👉 When clicked, update only the name inside localStorage, without affecting the email. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="">
+        <p>Update Name</p>
+        <input type="text" placeholder="Enter Name" class="name">
+        <br><br>
+        <button class="btn">Update Name</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // 1. Get the new name
+        let newName = document.querySelector(".name").value;
+
+        // 2. Get existing form data
+        let storedData = JSON.parse(localStorage.getItem("form"));
+
+        // 3. Update only the name field
+        storedData.name = newName;
+
+        // 4. Save the updated object
+        localStorage.setItem("form", JSON.stringify(storedData));
+
+        console.log("Updated name:", storedData);
+    });
+
+
+</script>

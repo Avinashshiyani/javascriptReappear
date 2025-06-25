@@ -1,0 +1,44 @@
+<!-- ✅ Challenge 5 (Bonus): Persistent Counter
+📌 Create a counter with + and - buttons.
+👉 Save its value to localStorage.
+👉 On page reload, restore the counter from where it left off. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p class="counter">0</p>
+        <button class="incbtn">+</button>
+        <button class="decbtn">-</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let incButton = document.querySelector(".incbtn")
+    let decButton = document.querySelector(".decbtn")
+    let counter = document.querySelector(".counter");
+    let value = 0;
+
+
+    incButton.addEventListener("click", () => {
+        counter.textContent  = ++value;
+        let 
+
+    })
+
+    decButton.addEventListener("click", () => {
+        counter.textContent  = --value;
+    })
+
+</script>

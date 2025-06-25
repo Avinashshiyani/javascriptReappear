@@ -1,0 +1,40 @@
+<!-- ✅ Challenge 4: Delete Specific Key from Local Storage
+📌 Add a button: “Delete Email”.
+👉 When clicked, remove only the email key from the object in localStorage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn"></button>
+</body>
+
+</html>
+
+<script>
+
+let btn = document.querySelector(".btn");
+
+btn.textContent = "Delete Email";
+
+btn.addEventListener("click", () => {
+    // Step 1: Get data
+    let getData = JSON.parse(localStorage.getItem("form"));
+
+    // Step 2: Remove only the 'email' key
+    delete getData.email;
+
+    // Step 3: Save the updated object back
+    localStorage.setItem("form", JSON.stringify(getData));
+
+    console.log("Email deleted:", getData);
+});
+
+
+</script>

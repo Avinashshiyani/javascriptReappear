@@ -1,0 +1,44 @@
+<!-- ✅ Challenge 1: Save Form Data to Local Storage
+📌 Create a form with fields: name and email.
+👉 On form submit, store the data in localStorage as JSON.
+👉 Prevent the page from refreshing on submit. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="">
+        <input type="text" placeholder="Enter Name" class="name">
+        <br><br>
+        <input type="text" placeholder="Enter Email" class="email">
+        <br><br>
+        <button class="btn">Submit</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    let btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", (e) => {
+        let nameData = document.querySelector(".name").value;
+        let emailData = document.querySelector(".email").value;
+        e.preventDefault();
+        let allData = {
+            name: nameData,
+            email: emailData,
+        };
+        let dataSave = JSON.stringify(allData);
+        console.log(dataSave);
+        localStorage.setItem("form", dataSave);
+    })
+
+</script>
