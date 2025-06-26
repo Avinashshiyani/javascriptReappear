@@ -1,0 +1,51 @@
+<!-- ✅ Challenge 4: Confirm Password Match
+📌 Add a confirm password field.
+👉 On submit:
+
+If both password fields match, show ✅ "Passwords match"
+
+Else ❌ "Passwords do not match" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="form">
+        <input type="password" required placeholder="Enter Password" name="password">
+        <input type="password" required placeholder="Re Enter Password" name="cpassword">
+        <p class="error"></p>
+        <button type="submit">Check</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+
+    let form = document.querySelector(".form")
+    let btn = document.querySelector(".btn");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let passwordInput = form.elements["password"];
+        let confirmPasswordInput = form.elements["cpassword"];
+        let error = document.querySelector(".error");
+
+        if (passwordInput.value.trim() === confirmPasswordInput.value.trim()) {
+            error.style.color = "green";
+            error.textContent = "Password Match Youn are great";
+        }
+        else {
+            error.style.color = 'red';
+            error.textContent = "Password Do not match";
+        }
+
+    })
+
+</script>

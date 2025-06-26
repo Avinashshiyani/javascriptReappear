@@ -1,0 +1,46 @@
+<!-- ✅ Challenge 3: Password Length Validation
+📌 Add a password field.
+👉 On submit, check if the password is at least 6 characters.
+
+If too short, show error message
+
+If valid, show success -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="post" class="form">
+        <input type="email" name="email" placeholder="Enter email" class="email">
+        <p class="email-error"></p>
+    </form>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector(".form");
+    let emailInputClass = document.querySelector(".email");
+    let emailError = document.querySelector(".email-error")
+
+
+    emailInputClass.addEventListener("input", () => {
+        let emailInput = form.elements["email"].value;
+        if (emailInput.length <= 6) {
+            emailError.style.color = "red";
+            emailError.textContent = "Please input more character more than 6"
+        }
+        else {
+            emailError.style.color = "green";
+            emailError.textContent = "Correct Brother"
+        }
+    })
+
+
+</script>

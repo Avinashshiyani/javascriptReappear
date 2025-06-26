@@ -1,0 +1,55 @@
+<!-- ✅ Challenge 1: Show Success Message
+📌 Create a form with fields: username and email.
+👉 When submitted with valid input (non-empty), show a success message like:
+✅ "Form submitted successfully!" below the form.
+👉 If any field is empty, show a red error below the empty input. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" class="form">
+        <input type="text" name="username" placeholder="Enter username">
+        <p class="username-error"></p>
+        <input type="email" name="email" placeholder="Enter Email">
+        <p class="email-error"></p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector(".form");
+
+    let usernameError = document.querySelector(".username-error")
+    let emailError = document.querySelector(".email-error")
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let usernameInput = form.elements["username"].value;
+        let emailInput = form.elements["email"].value;
+
+        if (usernameInput.trim() === "") {
+            usernameError.style.color = "red",
+                usernameError.textContent = "Username is required";
+        }
+        if (emailInput.trim() === "") {
+            emailError.style.color = "red",
+                emailError.textContent = "email is required";
+        }
+
+        if (emailInput !== "" && usernameInput !== "") {
+            console.log("Form Submitted Succesfully")
+        }
+
+
+    })
+</script>

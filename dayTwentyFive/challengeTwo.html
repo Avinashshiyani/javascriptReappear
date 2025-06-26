@@ -1,0 +1,47 @@
+<!-- ✅ Challenge 2: Real-time Email Check
+📌 As the user types in the email field, show real-time feedback:
+
+If it includes "@", show: ✅ "Valid email" in green
+
+Else show: ❌ "Invalid email" in red
+
+Use the "input" event for real-time validation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="post" class="form">
+        <input type="email" name="email" placeholder="Enter email" class="email">
+        <p class="email-error"></p>
+    </form>
+</body>
+
+</html>
+
+<script>
+    let form = document.querySelector(".form");
+    let emailInputClass = document.querySelector(".email");
+    let emailError = document.querySelector(".email-error")
+    
+    
+    emailInputClass.addEventListener("input", () => {
+        let emailInput = form.elements["email"].value;
+        if (emailInput.includes("@")) {
+            emailError.style.color = "green";
+            emailError.textContent = "@ sign is there nice brother"
+        }
+        else {
+            emailError.style.color = "red";
+            emailError.textContent = "Please include @ sign"
+        }
+    })
+
+
+</script>
