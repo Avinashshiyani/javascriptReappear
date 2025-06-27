@@ -1,0 +1,29 @@
+<!-- ✅ Challenge 5 (Bonus): Extract All Numbers
+📌 Write a function to extract all numbers from a given string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let hasDigit = (data = "Hello123") => {
+        let regex = /\d/;
+        let check = data.match(/[+-]?\d+(\.\d+)?/g);
+        let allNum = check.map((e) => {
+            console.log(e)
+        })
+    }
+
+    hasDigit("avinash123");
+</script>

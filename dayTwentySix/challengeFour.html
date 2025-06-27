@@ -1,0 +1,38 @@
+<!-- ✅ Challenge 4: Password Strength Check
+📌 Validate if the password:
+has at least 1 uppercase letter
+has at least 1 lowercase letter
+has at least 1 digit
+has at least 1 special character
+and is at least 8 characters long -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let hasDigit = (data = "Hello123") => {
+        let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+        let check = regex.test(data);
+
+        if (check) {
+            console.log("yes")
+        }
+        else {
+            console.log("No match")
+        }
+    }
+
+    hasDigit("Avinash123@gmail.com");
+</script>

@@ -1,0 +1,33 @@
+<!-- ✅ Challenge 1: Check for Digits
+📌 Write a function that checks if a given string contains at least one digit. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let hasDigit = (data = "Hello123") => {
+        let regex = /\d/;
+        let check = regex.test(data);
+
+        if (check) {
+            console.log("yes")
+        }
+        else {
+            console.log("No match")
+        }
+    }
+
+    hasDigit("avinash1");
+</script>

@@ -1,0 +1,33 @@
+<!-- ✅ Challenge 3: Match Only Alphabets
+📌 Write a function that checks if a string only contains letters (a–z, A–Z). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let hasAlpha = (data = "Hello123") => {
+        let regex = /\d/;
+        let check = regex.test(data);
+
+        if (check) {
+            console.log("Not having Alphabets")
+        }
+        else {
+            console.log("Having AlphaBets")
+        }
+    }
+
+    hasAlpha("avinash");
+</script>

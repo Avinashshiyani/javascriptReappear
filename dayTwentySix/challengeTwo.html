@@ -1,0 +1,35 @@
+<!-- ✅ Challenge 2: Validate Email
+📌 Use RegEx to check if an email is valid.
+
+🧠 Hint: A very simple email pattern can be: -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let hasEmail = (data = "Hello123") => {
+        let regex = /^\S+@\S+\.\S+$/;
+        let check = regex.test(data);
+
+        if (check) {
+            console.log("yes it has email")
+        }
+        else {
+            console.log("PLease Enter Email")
+        }
+    }
+
+    hasEmail("avinash112@gmail.com");
+</script>
