@@ -1,0 +1,25 @@
+<!-- ✅ Challenge 5 (Bonus): Update a Cookie
+📌 Update the user cookie to "Avinash Shiyani" and extend its expiry by 7 more days. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let date = new Date();
+    date.setDate(date.getDate() + 7);
+    let expires = date.toUTCString();
+    document.cookie = "user=Avinash Shiyani; expires=" + expires + "; path=/";
+    console.log(document.cookie);
+</script>

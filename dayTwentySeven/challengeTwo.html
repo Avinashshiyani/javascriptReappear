@@ -1,0 +1,26 @@
+<!-- ✅ Challenge 2: Remove from sessionStorage
+📌 Add a button: “Clear Name”
+👉 When clicked, remove the name key from sessionStorage. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">Button</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.querySelector(".btn");
+    btn.addEventListener("click" , ()=>{
+        sessionStorage.removeItem("user")
+    })
+</script>
