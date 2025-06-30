@@ -1,0 +1,29 @@
+<!-- ⚡ Challenge 4: Use Async/Await
+📌 Rewrite Challenge 1 using async/await instead of .then(). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    let ulInfo = document.querySelector(".ulInfo");
+    let getData = async () => {
+        let response = await fetch("https://jsonplaceholder.typicode.com/posts/");
+        let data = await response.json();
+    }
+
+    getData();
+</script>
