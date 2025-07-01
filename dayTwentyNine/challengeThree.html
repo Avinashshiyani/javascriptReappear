@@ -1,0 +1,38 @@
+<!-- ⚡ Challenge 3: Simulated API Call
+📌 Write a function fetchData() that returns a Promise.
+✅ After 1.5 seconds, resolve with { id: 1, name: "Avinash" }.
+👉 Call fetchData(), handle the result with .then(), and log the user name. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let fetchData = () => {
+        let newPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ id: 1, name: "Avinash" })
+            }, 1500)
+        })
+
+        return newPromise;
+    }
+
+    fetchData().then((data) => {
+        console.log("Name is ", data.name)
+    }).catch((e) => {
+        console.log("Something Went Wrong", e)
+    })
+</script>

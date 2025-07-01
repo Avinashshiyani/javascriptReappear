@@ -1,0 +1,45 @@
+<!-- ⚡ Challenge 5 (Bonus): Random Success or Fail
+📌 Create a Promise that randomly:
+
+Resolves with "Success!" OR
+
+Rejects with "Failed!"
+✅ Use Math.random() to decide.
+👉 Use .then() and .catch() to handle both cases. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    let newPromise = new Promise((resolve, reject) => {
+        let randomChoise = Math.random();
+        console.log(randomChoise);
+
+        if (randomChoise <= 0.5) {
+            resolve("Successfully Done");
+        }
+        else {
+            reject("Failed Successfully")
+        }
+
+    })
+
+    newPromise.then((data) => {
+        console.log("Done", data)
+    }).catch((e) => {
+        console.log("Error in this", e)
+    })
+</script>

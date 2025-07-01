@@ -1,0 +1,35 @@
+<!-- ⚡ Challenge 4: Promise Chain
+📌 Chain multiple .then() calls:
+Start with Promise.resolve(5)
+First .then(): multiply by 2
+Second .then(): add 10
+Third .then(): log the final result -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let newPromise = new Promise((resolve, reject) => {
+        resolve(5);
+    });
+
+    newPromise.then((num) => {
+        return num * 2;
+    }).then((num) => {
+        return num + 10;
+    }).then((num) => {
+        console.log(num)
+    })
+</script>

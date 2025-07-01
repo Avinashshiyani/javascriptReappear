@@ -1,0 +1,28 @@
+<!-- ⚡ Challenge 2: Promise Reject
+📌 Create a Promise that rejects with the message "Something went wrong!" after 1 second.
+👉 Catch the error using .catch() and log it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let newPromise = new Promise((resolve, reject) => {
+        reject("Its not done brother")
+    }).then(() => {
+        console.log("Its donr Brother in console log")
+    }).catch((e) => {
+        console.log("Error", e)
+    })
+</script>

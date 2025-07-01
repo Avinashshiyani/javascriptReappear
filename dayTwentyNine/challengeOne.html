@@ -1,0 +1,28 @@
+<!-- ⚡ Challenge 1: Basic Promise
+📌 Create a Promise that resolves after 2 seconds with the value "Hello, Promises!".
+👉 Log the result using .then(). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let newPrommise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Hello Promises")
+        }, 2000)
+    }).then(() => {
+        console.log("promise resolved")
+    })
+</script>
