@@ -1,0 +1,19 @@
+<!-- Challenge 5: Short-Circuiting
+Write a variable isLoggedIn = false.
+
+Use && to log "Welcome!" if logged in.
+
+Use || to set username = "Guest" if no user input. -->
+
+
+<script>
+    let isLoggedIn = false;
+
+    const welcome = isLoggedIn && "welcome";
+    const welcomeTwo = isLoggedIn || "Not welcome";
+
+    console.log(welcome);
+    console.log(welcomeTwo);
+
+
+</script>

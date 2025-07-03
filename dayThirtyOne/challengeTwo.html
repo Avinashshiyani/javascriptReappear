@@ -1,0 +1,11 @@
+<!-- Challenge 2: Destructure + Rest
+Destructure { name: "Avinash", age: 24, city: "Ahmedabad" }
+
+Extract name and store the rest in another variable. -->
+
+<script>
+    let data = { name: "Avinash", age: 24, city: "Ahmedabad" };
+    let { name, ...rest } = data;
+    console.log(name)
+    console.log(rest);
+</script>

@@ -1,0 +1,20 @@
+<!-- ✅ Challenge 3: Combine Spread & Rest
+Create two arrays [1, 2] and [3, 4].
+
+Combine them using spread.
+
+Then write a function that accepts all numbers using rest and returns their sum. -->
+
+<script>
+    let one = [1, 2 , 3 , 4]
+    let two = [3, 4]
+
+    let allNum = [...one, ...two];
+
+    let data = (allNum = [1, 2, 5, 7]) => {
+        return allNum.reduce((acc, dec) => acc + dec )
+    }
+
+    console.log(data(allNum))
+
+</script>

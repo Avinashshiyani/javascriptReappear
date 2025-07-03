@@ -1,0 +1,23 @@
+<!-- ✅ Challenge 6 (Bonus): Function Parameter Destructuring
+Write a function printUser that:
+
+Accepts an object with name, age, and city.
+
+Destructures name inside parameters.
+
+Logs the name and the remaining properties as one object. -->
+
+
+<script>
+    let data = {
+        name: "avinash",
+        age: 22,
+        city: "Ahmedabad",
+    }
+    let { name } = data;
+    let printUser = (name, ...data) => {
+        console.log(name)
+    }
+
+    printUser(data);
+</script>

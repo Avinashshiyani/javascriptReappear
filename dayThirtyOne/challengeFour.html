@@ -1,0 +1,18 @@
+<!-- ✅ Challenge 4: Optional Chaining & Nullish
+Given:
+
+js
+Copy
+Edit
+const user = { name: "Avinash", address: { city: "Ahmedabad" } };
+Safely get user.address.city with ?.
+
+If address is missing, default to "Unknown" with ??. -->
+
+<script>
+    const user = { name: "Avinash", address: { city: "Ahmedabad" } };
+
+    let address = user.address?.city ?? "Unknown";
+
+    console.log(address);
+</script>
