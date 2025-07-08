@@ -1,0 +1,20 @@
+<!-- ⚡ Challenge 2: Callback with Argument
+Write a function greet that accepts name and logs "Hello, name!".
+
+Write a function processUser that accepts a callback and a name.
+
+Call processUser with greet and "Avinash".
+ -->
+
+<script>
+
+    function greet(name = "avinash") {
+        console.log(`Hello , ${name}`);
+    }
+
+    function processUser(callback, name) {
+        callback(name)
+    }
+
+    processUser(greet, "avinash shiyani")
+</script>

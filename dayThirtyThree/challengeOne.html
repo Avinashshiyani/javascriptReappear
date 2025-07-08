@@ -1,0 +1,21 @@
+<!-- ⚡ Challenge 1: Basic Callback
+Write a function sayHello that logs "Hello!".
+
+Write a function executeCallback that accepts a callback and calls it.
+
+Pass sayHello to executeCallback. -->
+
+
+<script>
+
+    function sayHello(name = "Avi") {
+        console.log(name)
+    }
+
+    function executeCallback(sayBrother) {
+        sayBrother("My name is chatGPT ♥");
+    }
+
+    executeCallback(sayHello)
+
+</script>

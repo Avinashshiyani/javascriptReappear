@@ -1,0 +1,29 @@
+<!-- ⚡ Challenge 5 (Bonus): Custom Higher-Order Function
+Write a function customFilter that accepts an array and a callback.
+
+The callback decides if an item should be kept.
+
+Use customFilter to filter [1, 2, 3, 4, 5] for numbers greater than 3. -->
+
+
+<script>
+    function customFilter(arr, callback) {
+        const filteredArray = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            const currentItem = arr[i];
+
+            if (callback(currentItem)) {
+                filteredArray.push(currentItem);
+            }
+        }
+
+        return filteredArray;
+    }
+    const numbers = [1, 2, 3, 4, 5];
+    function isGreaterThanThree(num) {
+        return num > 3;
+    }
+    const result = customFilter(numbers, isGreaterThanThree);
+    console.log(result);
+</script>
