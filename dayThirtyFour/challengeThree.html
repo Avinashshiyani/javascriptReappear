@@ -1,0 +1,19 @@
+<!-- ⚡ Challenge 3: Reusable Map Function
+📌 Write a function mapStrings that:
+
+Accepts an array of strings and a callback.
+
+Returns a new array where each string is transformed by the callback.
+👉 Example: mapStrings(["a", "b"], str => str.toUpperCase()) → [“A”, “B”]
+ -->
+
+<script>
+
+    function mapStrings(arr, callback) {
+        return arr.map(callback); // .map automatically applies the callback to each item!
+    }
+
+    console.log(mapStrings(["a", "b"], str => str.toUpperCase())); // ["A", "B"]
+
+
+</script>

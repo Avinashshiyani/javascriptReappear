@@ -1,0 +1,15 @@
+<!-- Challenge 2: Array Filter with Callback
+📌 Write a function filterNumbers that:
+
+Accepts an array and a callback condition.
+
+Returns a new array with only numbers that match the callback.
+👉 Example: filterNumbers([1, 2, 3, 4], num => num > 2) → [3, 4] -->
+
+<script>
+    function filterNumbers(num = [1, 2, 3, 4], callback) {
+        return callback(num);
+    }
+    filterNumbers([1, 2, 3, 4], (e) => { e > 2; console.log(e) })
+
+</script>

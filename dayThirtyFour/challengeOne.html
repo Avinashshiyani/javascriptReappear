@@ -1,0 +1,16 @@
+<!-- ⚡ Challenge 1: Write Your Own Higher-Order Function
+📌 Write a function applyOperation that:
+
+Accepts a number and a callback function.
+
+Calls the callback with the number.
+👉 Example: applyOperation(5, (num) => num * 2) should return 10. -->
+
+<script>
+    function applyOperation(num = 10, callback) {
+        return callback(num);
+    }
+    console.log(
+        applyOperation(5, (num) => num * 2)
+    )
+</script>
