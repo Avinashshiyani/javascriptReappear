@@ -1,0 +1,25 @@
+<!-- 📌 Given:
+[
+  { item: "Book", price: 10 },
+  { item: "Pen", price: 2 },
+  { item: "Bag", price: 20 }
+]
+
+👉 Use reduce() to get total price.
+👉 Log the result. -->
+
+<script>
+
+    let data = [
+        { item: "Book", price: 10 },
+        { item: "Pen", price: 2 },
+        { item: "Bag", price: 20 }
+    ];
+
+    let totalPrice = data.reduce((acc, dcc) => {
+       return acc + dcc.price
+    } , 0)
+
+    console.log(totalPrice);
+
+</script>

@@ -1,0 +1,22 @@
+<!-- 📌 Given an array of user objects: 
+[
+  { name: "Avi", age: 22 },
+  { name: "John", age: 17 },
+  { name: "Sara", age: 30 }
+]
+
+👉 Use filter() to keep only users age 18 and above.
+👉 Log the filtered array. -->
+
+<script>
+    let data = [
+        { name: "Avi", age: 22 },
+        { name: "John", age: 17 },
+        { name: "Sara", age: 30 }
+    ];
+
+    let filteredData = data.filter((e) => e.age >= 18);
+
+    console.log(filteredData);
+
+</script>
