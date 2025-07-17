@@ -1,0 +1,24 @@
+<!-- ⚡️ Challenge 5: Add Method Outside the Constructor
+✅ Goal: Create a constructor function called Animal with properties name and type.
+Then attach a method speak() outside the constructor using .prototype that logs:
+"[name] is a [type] and it makes a sound!"
+
+🧠 This teaches how memory is saved by sharing methods using prototype. -->
+
+
+<script>
+
+    function Animal(name = "abc", type = "xyz") {
+        this.name = name
+        this.type = type
+    }
+
+    let first = new Animal("rabbit", "xzzx");
+
+    Animal.prototype.speak = function () {
+        console.log(`${this.name} is a ${this.type} and it makes a sound!`)
+    }
+
+    first.speak();
+
+</script>

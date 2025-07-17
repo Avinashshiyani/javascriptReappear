@@ -1,0 +1,21 @@
+<!-- 🔹 Challenge 2:
+Create a Student constructor that takes name and grade and has a method introduce() that logs:
+"Hi, I’m [name] and I’m in grade [grade]" -->
+
+<script>
+
+    function Student(name = "avinash", grade = "b") {
+        this.name = name;
+        this.grade = grade;
+        this.introduce = function () {
+            console.log(`Hi, I’m ${this.name} and I’m in grade ${this.grade}`)
+        }
+
+    }
+
+    let data = new Student();
+
+    data.introduce();
+
+
+</script>

@@ -1,0 +1,20 @@
+<!-- 📌 Fetch posts from https://jsonplaceholder.typicode.com/posts
+👉 Use map() to extract only titles.
+👉 Log all titles. -->
+
+
+<script>
+    let fetchData = async () => {
+        try {
+            let postData = await fetch("https://jsonplaceholder.typicode.com/posts");
+            let post = await postData.json();
+            let title = post.map((e) => {
+                console.log(e.title)
+            })
+        } catch (error) {
+            console.log("Error in fetching")
+        }
+    }
+
+    console.log(fetchData())
+</script>

@@ -1,0 +1,27 @@
+<!-- 🔹 Challenge 3:
+Create a Book class using ES6 class syntax with:
+
+title, author
+
+a method summary() that logs:
+"Title: [title], Author: [author]"
+ -->
+
+
+<script>
+
+    class Book {
+
+        constructor(title = "hello", author = "javascript") {
+            this.title = title
+            this.author = author
+        }
+        method() {
+            console.log(`Title : ${this.title} || Author : ${this.author}`)
+        }
+    }
+    let info = new Book("Code", "Avinash");
+
+    info.method();
+
+</script>

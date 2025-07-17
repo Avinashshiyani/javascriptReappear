@@ -1,0 +1,23 @@
+<script>
+    let runSteps = async () => {
+        let step1 = await new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Step 1");
+            }, 1000);
+        });
+
+        console.log(step1);
+
+        let step2 = await new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("Step 2");
+            }, 1000);
+        });
+
+        console.log(step2);
+    };
+
+    runSteps();
+
+
+</script>

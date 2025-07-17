@@ -1,0 +1,16 @@
+<!-- 📌 Write an async function that:
+- Tries to fetch data from an invalid URL.
+- Catches the error and logs "Failed to fetch!". -->
+
+<script>
+    let getData = async () => {
+        try {
+            let res = await fetch("https://.typicode.com/uers");
+            let data = await res.json();
+        } catch (error) {
+            console.log(error, "Failed To fetch");
+        }
+    }
+
+    getData();
+</script>

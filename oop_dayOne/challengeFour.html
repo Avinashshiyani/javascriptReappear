@@ -1,0 +1,24 @@
+<!-- ⚡️ Challenge 4: Create Multiple Objects Using Constructor Function
+✅ Goal: Create a Mobile constructor that accepts brand, price, and batteryLife.
+Add a method details() that logs:
+"Brand: [brand], Price: [price], Battery Life: [batteryLife] hours"
+
+👉 Then create 2 different mobiles using it and call their details() method. -->
+
+<script>
+
+    function Mobile(brand, price, batteryLife) {
+        this.brand = brand
+        this.price = price
+        this.batteryLife = batteryLife
+        this.details = function () {
+            console.log(`Brand: ${this.brand}, Price: ${this.price}, Battery Life: ${this.batteryLife} hours`)
+        }
+    }
+
+    let mobileOne = new Mobile("Samsuung", 70000, "78%")
+    let mobileTwo = new Mobile("Xiomi", 7000, "23%")
+    mobileOne.details();
+    mobileTwo.details();
+
+</script>

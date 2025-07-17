@@ -1,0 +1,46 @@
+<!-- Challenge 6: Class with Conditional Logic Inside Method
+✅ Goal: Create a BankAccount class that accepts owner and balance.
+
+Add methods:
+
+deposit(amount)
+
+withdraw(amount) – only allow if balance is enough
+
+getBalance() – logs current balance -->
+
+<script>
+
+    class BankAccount {
+        constructor(owner, balance = 0) {
+            this.owner = owner
+            this.balance = balance
+        }
+
+        deposit(amount = 0) {
+            this.balance += amount;
+        }
+
+        withdrow(amount = 0) {
+            if (this.balance < amount) {
+                console.log("Bank balance is not efficient");
+                return;
+            }
+            else {
+                this.balance -= amount;
+            }
+        }
+
+        getBalance() {
+            console.log(`This is you bank balance ${this.balance}`);
+        }
+
+    }
+
+    let bank = new BankAccount();
+    bank.deposit(1000);
+    bank.deposit(300);
+    bank.withdrow(800);
+    bank.getBalance();
+
+</script>

@@ -1,0 +1,17 @@
+<!-- 📌 Use fetch with async/await to get data from:
+https://jsonplaceholder.typicode.com/users
+
+👉 Log the names of all users. -->
+
+<script>
+    let getUsers = async () => {
+        await fetch("https://jsonplaceholder.typicode.com/users").then((e) => {
+            return e.json();
+        }).then((e) => {
+            e.map((data) => {
+                console.log(data.name)
+            })
+        })
+    }
+    getUsers();
+</script>
