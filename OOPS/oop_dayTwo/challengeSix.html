@@ -1,0 +1,35 @@
+<!-- // 📌 Create a parent class `Account` with:
+// - name, balance
+
+// 📌 Create child class `SavingsAccount` that adds:
+// - interestRate
+// - a method `showDetails()` that logs all properties
+
+// ✅ Use `super()` and `this` to initialize and access values -->
+
+<script>
+
+    class Account {
+        constructor(name = "Avinash", balance = 0) {
+            this.name = name;
+            this.balance = balance;
+        }
+    }
+
+    class SavingsAccount extends Account {
+        constructor(name, balance, interestRate = "4%") {
+            super(name, balance);
+            this.interestRate = interestRate;
+        }
+
+        showDetails() {
+            console.log(`Name: ${this.name}`)
+            console.log(`Balance: ${this.balance}`)
+            console.log(`Interest: ${this.interestRate}`)
+        }
+    }
+
+
+    let sa = new SavingsAccount("nishit", 10000, "5%");
+    sa.showDetails();
+</script>

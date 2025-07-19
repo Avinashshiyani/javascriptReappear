@@ -1,0 +1,31 @@
+<!-- // 📌 Create class `Device` with method `powerOn()`
+// 📌 Create class `Smartphone` that:
+// - extends `Device`
+// - has methods `takePhoto()` and `makeCall()`
+
+// ✅ Create an instance and call all 3 methods. -->
+
+<script>
+
+    class Device {
+        powerOn() {
+            console.log("Power on")
+        }
+    }
+
+    class Smartphone extends Device {
+        takePhoto() {
+            console.log("Take Photo")
+        }
+        makeCall() {
+            console.log("Make Call")
+        }
+    }
+
+
+    let sp = new Smartphone();
+    sp.powerOn()
+    sp.takePhoto()
+    sp.makeCall()
+
+</script>

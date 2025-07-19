@@ -1,0 +1,49 @@
+<script>
+    class User {
+      static userCount = 0;
+  
+      constructor(name, email) {
+        this.name = name;
+        this.email = email;
+        User.userCount++; // ✅ Track users created
+      }
+  
+      login() {
+        console.log(`${this.name} has logged in.`);
+      }
+  
+      static getUserCount() {
+        return User.userCount;
+      }
+    }
+  
+    class Admin extends User {
+      constructor(name, email, role = "admin") {
+        super(name, email); // ✅ super must come first
+        this.role = role;
+      }
+  
+      deleteUser(user) {
+        console.log(`${this.name} deleted ${user.name}`);
+      }
+    }
+  
+    // ✅ Create 2 users
+    let user1 = new User("Nishit", "nishit@example.com");
+    let user2 = new User("Ravi", "ravi@example.com");
+  
+    // ✅ Create 1 admin
+    let admin = new Admin("Avinash", "avinash@example.com");
+  
+    // ✅ Test login
+    user1.login(); // Nishit has logged in.
+    user2.login(); // Ravi has logged in.
+    admin.login(); // Avinash has logged in.
+  
+    // ✅ Show total users
+    console.log("Total users created:", User.getUserCount()); // 3
+  
+    // ✅ Admin deletes one user
+    admin.deleteUser(user2); // Avinash deleted Ravi
+  </script>
+  

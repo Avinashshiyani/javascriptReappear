@@ -1,0 +1,29 @@
+<!-- Create a class Person with name and age. Inherit a class Employee from it that adds a job role. Log all 3 properties using this and super. -->
+
+<script>
+
+    class Person {
+
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+    }
+
+    class Employee extends Person {
+
+        constructor(name, age, jobrole) {
+            super(name, age)
+            this.jobrole = jobrole
+        }
+    }
+
+    let e = new Employee("Nishit", 23, "Associate Engineer");
+
+    console.log(e.name)
+    console.log(e.age)
+    console.log(e.jobrole);
+
+
+</script>

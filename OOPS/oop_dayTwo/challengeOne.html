@@ -1,0 +1,23 @@
+<!-- Create a class Vehicle with a method start() that logs "Engine started". Inherit a class Car from it that adds a drive() method logging "Car is driving". -->
+
+<script>
+
+    class Vehicle {
+        start() {
+            console.log("Engine Started")
+        }
+    }
+
+    class Car extends Vehicle {
+        drive() {
+            console.log("Car is Driving");
+        }
+    }
+
+    let transport = new Car();
+
+    transport.start();
+    transport.drive();
+
+
+</script>
