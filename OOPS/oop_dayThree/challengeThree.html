@@ -1,0 +1,40 @@
+<!-- ✅ Challenge 3: Method Chaining Practice
+Create a ScoreTracker class:
+
+Property: score = 0
+
+Methods: win(points), lose(points), display()
+
+Support chaining
+
+Example: -->
+
+<!-- new ScoreTracker().win(10).lose(4).win(5).display(); // 11 -->
+
+<script>
+
+    class ScoreTracker {
+        constructor(score = 0) {
+            this.score = score
+        }
+
+        win(points) {
+            this.score += points
+            return this;
+        }
+
+        lose(points) {
+            this.score -= points
+            return this
+        }
+
+        display(points) {
+            console.log(`Score is ${this.score}`)
+            return this;
+        }
+    }
+
+    const score = new ScoreTracker().win(10).lose(4).display();
+
+
+</script>

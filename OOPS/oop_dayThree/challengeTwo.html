@@ -1,0 +1,42 @@
+<!-- ✅ Challenge 2: Full Name Getter/Setter
+Create a Person class:
+
+Accept firstName and lastName
+
+Getter fullName → returns firstName + lastName
+
+Setter fullName → splits and sets both -->
+
+
+<script>
+
+    class Person {
+        constructor(firstName, lastname) {
+            this._firstName = firstName
+            this._lastname = lastname
+        }
+
+        get fullName() {
+            return `${this._firstName} ${this._lastname}`;
+        }
+
+        set fullName(value) {
+            const parts = value.split(" ");
+            if (parts.length === 2) {
+                this.firstName = parts[0];
+                this.lastName = parts[1];
+            } else {
+                console.log("Please provide both first and last names.");
+            }
+        }
+    }
+
+    const p = new Person("Avi", "Shiyani");
+
+    console.log(p.fullName); // Avi Shiyani
+
+    p.fullName = "Rahul Verma";
+
+    console.log(p.firstName, p.lastName);
+
+</script>

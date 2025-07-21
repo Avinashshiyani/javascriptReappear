@@ -1,0 +1,32 @@
+<script>
+  class Wallet {
+    #balance; // ✅ private field
+
+    constructor(initialAmt = 0) {
+      this.#balance = initialAmt;
+    }
+
+    addMoney(amt) {
+      this.#balance += amt;
+      return this; // ✅ enables method chaining
+    }
+
+    spendMoney(amt) {
+      this.#balance -= amt;
+      return this; // ✅ enables method chaining
+    }
+
+    getBalance() {
+      console.log(this.#balance);
+      return this;
+    }
+  }
+
+  // ✅ Testing
+  const myWallet = new Wallet(1000); // Start with ₹1000
+
+  myWallet
+  .spendMoney(300) // -₹300
+    .addMoney(500)  // +₹500
+    .getBalance();   // Output: 1200
+</script>
